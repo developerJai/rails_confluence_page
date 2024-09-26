@@ -17,6 +17,11 @@
 
 ### Configurations
 - Update username and password (API token) *.env* for development environment
+```
+CONFLUENCE_DOMAIN=CONFLUENCE_CLOUD_DOMAIN
+CONFLUENCE_USERNAME=CONFLUENCE_EMAIL
+CONFLUENCE_PASSWORD=API_TOKEN
+```
 
 ## Runner
 - Use `rails s` command on terminal to start rails server
