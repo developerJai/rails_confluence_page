@@ -1,2 +1,21 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Confluence : Fetch page content</h1>
+  
+
+  <%=form_for :confluence, url: root_path, method: :get do |f| %>
+    <label>Enter page URL</label>
+    <p>
+      <small>
+        Avoid using Confluence's tiny URLs. Instead, obtain the full page URL that includes the page ID.
+      </small>
+    </p>
+    <input type="text" name="page_url" style="width: 30%;" value="<%=params[:page_url]%>" required>
+
+    <input type="submit" value="Submit"><br>
+    <strong> <%= @msg %> </strong> 
+  <% end %>
+<% if @result %>
+  <hr>
+  <h3> Page content </h3>
+  <%= @result.html_safe %>
+<% end%>
+

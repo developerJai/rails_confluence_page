@@ -1,24 +1,28 @@
-# README
+# Confluence : Fetch page content
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Used componenets:
+- Programming Language: Ruby 3.3.3
+- Framework: Rails 7.0.8
+- Library: httparty (For third party APIs)
+- Third-Party APIs: Confluence APIs V2
+- Authorization: Basic Auth
 
-Things you may want to cover:
+## Prerequisite
+### Generate API Token
+- Login to your atlassian dashboard
+- Generate API token from: https://id.atlassian.com/manage-profile/security/api-tokens
+- Generate pages in Confluence for testing the URLs
+- Do not use tiny urls of the page. Generally Confluence provide the tiny urls
+- You have to find the url with the page id and use that in the script
 
-* Ruby version
+### Configurations
+- Update username and password (API token) *.env* for development environment
 
-* System dependencies
+## Runner
+- Use `rails s` command on terminal to start rails server
+- Open http://localhost:3000 in your browser
+- Put your confluence page url in the input box and submit
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Documentations
+- Confluence APIs: https://developer.atlassian.com/cloud/confluence/rest/v2/intro/#auth
+- HTTParty Library: https://github.com/jnunemaker/httparty
